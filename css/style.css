@@ -11,3 +11,9 @@ body {
 #my-search-bar::placeholder {
     color: darkgrey;
 }
+
+@media screen and (max-width: 480px) {
+    th, td {
+         max-width: calc(100% / 3) ; 
+    }
+}
