@@ -1,13 +1,7 @@
-@import url("bootstrap/dist/css/bootstrap.min.css");
-
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.custom-td {
-    width: calc(50% / 3);
 }
 
 .custom-bg-grey {
@@ -16,11 +10,4 @@ body {
 
 #my-search-bar::placeholder {
     color: darkgrey;
-}
-
-@media screen and (max-width: 576px) {
-    
-    .custom-td {
-        width: auto;
-    }
 }
