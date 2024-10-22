@@ -13,7 +13,11 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    th, td {
-         max-width: calc(100% / 3) ; 
+    tr th:first-child, tr td:first-child{
+        max-width: 38%;
     }
+    /* tr th:not(:first-child), tr td:not(:first-child) {
+        border: 2px solid red;
+        width: calc(60% / 2) ; 
+    } */
 }
