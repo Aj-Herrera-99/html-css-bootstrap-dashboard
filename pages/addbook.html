@@ -54,38 +54,49 @@
     <!-- form -->
     <div class="container my-4">
         <h1>Nuovo libro</h1>
-        <form id="my-form" class="row row-gap-3 mt-3">
-            <div class="col-6">
+        <form id="my-form" class="row row-gap-3 mt-3 needs-validation" novalidate>
+            <div class="col-6 has-validation">
                 <label for="fname" class="form-label">Nome Autore</label>
-                <input type="email" class="form-control" id="fname" name="fname" placeholder="Inserisci nome">
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="Inserisci nome" required>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
             </div>
             <div class="col-6">
                 <label for="lname" class="form-label">Cognome Autore</label>
-                <input type="password" class="form-control" id="lname" name="lname" placeholder="Inserisci cognome">
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Inserisci cognome"
+                    required>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
             </div>
             <div>
                 <label for="title" class="form-label">Titolo</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Inserisci il titolo del libro">
+                <input type="text" class="form-control" id="title" name="title"
+                    placeholder="Inserisci il titolo del libro" required>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
+
             </div>
             <div class="col-sm-4">
                 <label for="genre" class="form-label">Genere</label>
-                <select id="genre" name="genre" class="form-select">
-                    <option selected>Scegli il genere</option>
-                    <option>Giallo</option>
-                    <option>Horror</option>
-                    <option>Storico</option>
-                    <option>Romanzo</option>
-                    <option>Narrativa</option>
-                    <option>Saggistica</option>
+                <select id="genre" name="genre" class="form-select" required>
+                    <option selected value="">Scegli il genere</option>
+                    <option value="giallo">Giallo</option>
+                    <option value="horror">Horror</option>
+                    <option value="storico">Storico</option>
+                    <option value="romanzo">Romanzo</option>
+                    <option value="narrativa">Narrativa</option>
+                    <option value="saggistica">Saggistica</option>
                 </select>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
             </div>
             <div class="col-sm-4">
                 <label for="year" class="form-label">Anno di pubblicazione</label>
-                <input type="text" class="form-control" id="year" name="year" placeholder="Scegli l'anno">
+                <input type="number" min="1000" max="3000" class="form-control" id="year" name="year"
+                    placeholder="Scegli l'anno" required>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
             </div>
             <div class="col-sm-4">
                 <label for="isbn" class="form-label text-uppercase">isbn#</label>
-                <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Inserisci il codice ISBN#">
+                <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Inserisci il codice ISBN#"
+                    required>
+                <div class="invalid-feedback">Campo obbligatorio!</div>
             </div>
             <div class="border my-3"></div>
             <div>
@@ -106,12 +117,36 @@
                 <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
         </form>
+
+
     </div>
 
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+
+    </script>
 </body>
 
 </html>
