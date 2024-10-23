@@ -33,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Catalogo Libri</a>
+                        <a class="nav-link active" href="pages/addbook.html">Catalogo Libri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Anagrafica Utenti</a>
@@ -53,7 +53,8 @@
             </div>
         </div>
     </nav>
-    <div class="container my-4">
+    <!-- wrapper -->
+    <main class="container my-4">
         <div class="row">
             <!-- dashboard -->
             <div class="col-lg-9">
@@ -283,32 +284,28 @@
             <!-- col 2 -->
             <div class="col-lg-3">
                 <!-- -todo -->
-                <div class="border border-2 rounded-2">
+                <div class="card overflow-hidden">
                     <h3 class="fw-normal custom-bg-grey py-2 px-3 border-2 border-bottom">Todo</h3>
-                    <ul class="container mt-2">
-                        <li class="form-check border border-2 rounded-top-2 py-2 px-5 mb-0">
-                            <input class="form-check-input" type="checkbox" value="" id="segreteria">
-                            <label class="form-check-label" for="segreteria">
-                                Chiamare segreteria
-                            </label>
-                        </li>
-                        <li class="form-check border border-2 border-top-0 py-2 px-5 mb-0">
-                            <input class="form-check-input" type="checkbox" value="" id="prestiti-scaduti">
-                            <label class="form-check-label" for="prestiti-scaduti">
-                                Mandare avvisi prestiti scaduti
-                            </label>
-                        </li>
-                        <li class="form-check border border-2 border-top-0 rounded-bottom-2 py-2 px-5 mb-0">
-                            <input class="form-check-input" type="checkbox" value="" id="nuovi-libri">
-                            <label class="form-check-label" for="nuovi-libri">
-                                Ordinare nuovi libri
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- faq -->
                 <div class="border border-2 rounded-2 mt-4">
-                    <h3 class="fw-normal custom-bg-grey py-2 px-3 border-2 border-bottom">F.A.Q.</h3>
+                    <h3 class="fw-normal custom-bg-grey py-2 px-3 border-2 border-bottom text-uppercase">f.a.q.</h3>
                     <div class="container accordion accordion-flush mt-3" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -366,7 +363,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     </div>
 
     <!-- script -->

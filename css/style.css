@@ -12,9 +12,21 @@ body {
     color: darkgrey;
 }
 
+tr td:last-child {
+    min-width: 100px;
+}
+
+/* #my-form > div {
+    margin-block: 20px;
+} */
+
 @media screen and (max-width: 480px) {
     tr th:first-child, tr td:first-child{
         max-width: 38%;
+    }
+
+    tr td:last-child {
+        min-width: auto;
     }
     /* tr th:not(:first-child), tr td:not(:first-child) {
         border: 2px solid red;
